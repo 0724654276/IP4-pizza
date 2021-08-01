@@ -47,4 +47,100 @@ body {
   left: 0;
   top: 0;
   background: rgba(0, 0, 0, 0.6);
+} #order{
+  display:none; 
 }
+.intro{
+  text-align: center;
+  position: absolute; 
+  top:10%;
+  left:20%
+}
+.intro img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%
+}
+.intro h1{
+  color:rgb(44, 168, 44);
+  font-size:50px;
+}
+.intro p {
+  color:white;
+}
+.intro button {
+  border:1px solid #6ab446;
+  background:rgb(3, 70, 3);
+  border-radius: 0;
+  color:#fff;
+}
+.intro button:hover {
+  border:1px solid #fff;
+  background:red;
+  color:#000;
+}
+
+.features {
+  margin: 4em auto;
+  padding: 1em;
+  position: relative;
+}
+.feature-title {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.features img {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+
+button #send{
+  align-items: center;
+}
+
+.jumbotron{
+  padding: 100px;
+  color: black;
+}
+  .card{
+  background-size: cover;
+  opacity: 1;
+  box-shadow: 5px 10px 5px;
+  }  
+
+  #pizzaDetails{
+  display: none;
+  cursor: pointer;
+  text-decoration:underline;
+  color: aqua;
+  font-size:20px;
+  }
+  #pizzaDetail{
+  display: none;
+  }
+  #deliver{
+  display: none;
+  }
+  #pickup{
+  display: none;
+  }
+  #checkout{
+  display: none;
+  }
+  #Cost{
+  text-align: center;
+  margin-top: 5%;
+  }
+  .card-title{
+    text-align: center;
+  }
+  #foot{
+    text-align: center;
+    margin-top: 50px;
+ }
+ 
