@@ -143,3 +143,12 @@ button #send{
     text-align: center;
     margin-top: 50px;
  }
+
+.footer-msg p{
+  padding-top:10px;
+  font-size: 0.7em;
+}
+ul>li{
+  display: inline-block;
+  padding:20px;
+}
