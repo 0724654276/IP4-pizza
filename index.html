@@ -1,194 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pizzeria</title>
-    
-    <link rel="stylesheet" href="css/bootstrap.css" type=text/css>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/jquery-3.4.1.js">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pizzeria</title>
+
+  <link rel="stylesheet" href="css/bootstrap.css" type=text/css>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.4.1.js">
     <script src="js/script.js"></script>
-    </script>
+  </script>
 </head>
+
 <body>
 
 
-    <nav class="navbar navbar-expand-md">
+  <nav class="navbar navbar-expand-md">
 
-        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation"  >
-          <span class="navbar-toggler-icon" ></span>
-        </button>
-        <div class="collapse navbar-collapse" id="main-navigation">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Us</a>
-            </li>
-          </ul>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <a class="navbar-brand" href="#order" id="orders">ORDER</a>
+  </nav>
+
+  <header class="page-header header container-fluid">
+    <div class="overlay">
+      <div class="intro">
+        <img src="images/picola.jpg">
+        <h1>picola pizzeria</h1>
+
+
+
+      </div>
+    </div>
+
+    </div>
+    </div>
+  </header>
+
+  <div id="order">
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="row">
+        <div class="col-md-9">
+          <h1 class="card-title"><em>ORDER PIZZA</h1>
         </div>
-    
-        <a class="navbar-brand" href="#order" id="orders">ORDER</a>
-      </nav>
-    
-      <header class="page-header header container-fluid">
-        <div class="overlay">
-          <div class="intro">
-            <img src="images/picola.jpg">
-            <h1>picola pizzeria</h1>
-            
-            
-    
+      </div>
+      </di>
+      <div class="container">
+        <div class="card">
+          <div class="row container">
+            <div class="col-md-6">
+              <form class="form-group" id="pizzaOrder">
+                <div id="pizzaSize">
+                  <label for="">select Pizza Size</label>
+                  <select required class="form-control" id="size">
+                    <option></option>
+                    <option value="Small">Small pizza</option>
+                    <option value="Medium">Medium pizza</option>
+                    <option value="Large">Large pizza</option>
+                  </select>
+                </div><br>
+                <div id="pizzaCrusts">
+                  <label for="">Choose Pizza Crust</label>
+                  <select required class="form-control" id="crust">
+                    <option></option>
+                    <option value="cracker">cracker pizza</option>
+                    <option value="flat bread">flat bread pizza</option>
+                    <option value="stuffed">stuffed pizza</option>
+                  </select>
+                </div><br>
+                <div id="pizzaTopping1">
+                  <label for="">Choose Pizza Topping1: </label>
+                  <select required class="form-control" id="Topping1">
+                    <option></option>
+                    <option value="green">Green peper</option>
+                    <option value="Mushroom">Mushroom</option>
+                    <option value="Chicken">Cheese</option>
+                    <option value="Beef">Black Olive</option>
+                    <option value="Sausage">Red Onions</option>
+                  </select>
+                </div><br>
+                <div id="pizzaTopping2">
+                  <label for="">Choose Pizza Topping2: </label>
+                  <select required class="form-control" id="Topping2">
+                    <option></option>
+                    <option value="Peparoni">peparoni</option>
+                    <option value="Sausage">tomatoes</option>
+                    <option value="Sausage">Bacon</option>
+                  </select>
+                </div><br>
+
+
+                <div class="pizzaNumber">
+                  <label for="number">number of pizza to order</label>
+                  <input required type="number" class="form-control" id="pizza-number" min="1" placeholder="number">
+                </div><br>
+
+                <button type="submit" class="btn btn-info" id="send">Order</button>
+              </form>
+            </div>
+            <div class="col-md-6" id="price">
+              <h4>Price: <span id="totalPizzaCost"></span></h4>
+              <div id="order-details">
+                <p><a id="pizzaDetails">Pizza Details</a></p>
+                <p id="pizzaDetail">
+                </p>
+                <div class="deliver-pick">
+                  <button type="btn" class="btn btn-primary" id="deliver">Delivery</button>
+                  <ul id="deliveryPrice"></ul>
+
+                  <button type="btn" class="btn btn-primary" id="pickup">Pick up</button>
+                </div><br>
+              </div>
+
+              <button type="btn" class="btn btn-primary" id="checkout">Checkout</button>
+              <h3><span id="check"></span></h3>
+            </div>
           </div>
         </div>
-    
-    </div>
-</div>
-</header>
-
-<div id="order">
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="row">
-    <div class="col-md-9">
-      <h1 class="card-title"><em>ORDER PIZZA</h1>
+      </div>
     </div>
   </div>
-  </di>
-  <div class="container">
-    <div class="card">
-      <div class="row container">
-        <div class="col-md-6">
-          <form class="form-group" id="pizzaOrder">
-            <div id="pizzaSize">
-              <label for="">select Pizza Size</label>
-              <select required class="form-control" id="size">
-                <option></option>
-                <option value="Small">Small pizza</option>
-                <option value="Medium">Medium pizza</option>
-                <option value="Large">Large pizza</option>
-              </select>
-            </div><br>
-            <div id="pizzaCrusts">
-              <label for="">Choose Pizza Crust</label>
-              <select required class="form-control" id="crust">
-                <option></option>
-                <option value="cracker">cracker pizza</option>
-                <option value="flat bread">flat bread pizza</option>
-                <option value="stuffed">stuffed pizza</option>
-              </select>
-            </div><br>
-            <div id="pizzaTopping1">
-              <label for="">Choose Pizza Topping1: </label>
-              <select required class="form-control" id="Topping1">
-                <option></option>
-                <option value="green">Green peper</option>
-                <option value="Mushroom">Mushroom</option>
-                <option value="Chicken">Cheese</option>
-                <option value="Beef">Black Olive</option>
-                <option value="Sausage">Red Onions</option>
-              </select>
-            </div><br>
-            <div id="pizzaTopping2">
-              <label for="">Choose Pizza Topping2: </label>
-              <select required class="form-control" id="Topping2">
-                <option></option>
-                <option value="Peparoni">peparoni</option>
-                <option value="Sausage">tomatoes</option>
-                <option value="Sausage">Bacon</option>
-              </select>
-            </div><br>
 
-
-            <div class="pizzaNumber">
-              <label for="number">number of pizza to order</label>
-              <input required type="number" class="form-control" id="pizza-number" min="1"
-                placeholder="number">
-            </div><br>
-
-            <button type="submit" class="btn btn-info" id="send">Order</button>
-          </form>
+  <div id="about">
+    <div class="container features">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <h3 class="feature-title">Fresh Pizza</h3>
+          <img src="images/cheese.jpeg" class="img-fluid">
+          <p>The homemade pizza dough is produced in-house daily and is another reason why the pizza at Picola pizzeria
+            always tastes better. </p>
         </div>
-        <div class="col-md-6" id="price">
-          <h4>Price: <span id="totalPizzaCost"></span></h4>
-          <div id="order-details">
-            <p><a id="pizzaDetails">Pizza Details</a></p>
-            <p id="pizzaDetail">
-            </p>
-            <div class="deliver-pick">
-              <button type="btn" class="btn btn-primary" id="deliver">Delivery</button>
-              <ul id="deliveryPrice"></ul>
-
-              <button type="btn" class="btn btn-primary" id="pickup">Pick up</button>
-            </div><br>
-          </div>
-
-          <button type="btn" class="btn btn-primary" id="checkout">Checkout</button>
-          <h3><span id="check"></span></h3>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <h3 class="feature-title">Delicious Pizza</h3>
+          <img src="images/margherita.jpeg" class="img-fluid">
+          <p>The Twisty Bread, the signature Wingz and the delicious Double Meal are additional value-for-money options
+            that keep our satisfied customers coming back time after time. </p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <h3 class="feature-title">Offers</h3>
+          <img src="images/meat.jpg" class="img-fluid">
+          <p>These are the meals that have made our <strong>Terrific Tuesday</strong> everyone’s favorite day of the
+            week. When entertaining, a Hawaiian pizza, a Regina pizza, or a Peri Peri Chicken pizza from Picola pizzeria
+            is the obvious and perfect option to please crowds of all ages. </p>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 
-<div id="about">
-  <div class="container features">
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <h3 class="feature-title">Fresh Pizza</h3>
-        <img src="images/cheese.jpeg" class="img-fluid">
-        <p>The homemade pizza dough is produced in-house daily and is another reason why the pizza at Picola pizzeria always tastes better. </p>
+  <div id="contact">
+    <div class="jumbotron jumbotron-fluid">
+      <h3 class="feature-title">contact us</h3>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Name" name="">
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <h3 class="feature-title">Delicious Pizza</h3>
-        <img src="images/margherita.jpeg" class="img-fluid">
-        <p>The Twisty Bread, the signature Wingz and the delicious Double Meal are additional value-for-money options that keep our satisfied customers coming back time after time. </p>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address" name="email">
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <h3 class="feature-title">Offers</h3>
-        <img src="images/meat.jpg" class="img-fluid">
-        <p>These are the meals that have made our <strong>Terrific Tuesday</strong> everyone’s favorite day of the week. When entertaining, a Hawaiian pizza, a Regina pizza, or a Peri Peri Chicken pizza from Picola pizzeria is the obvious and perfect option to please crowds of all ages.   </p>
+      <div class="form-group">
+        <textarea class="form-control" rows="4"></textarea>
       </div>
+      <button type="submit" class="btn btn-info" id="send">Send</button>
     </div>
   </div>
-</div>
 
-<div id="contact">
-  <div class="jumbotron jumbotron-fluid">
-    <h3 class="feature-title">contact us</h3>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Name" name="">
+  <div id="foot">
+    <div class="icons">
+      <ul>
+        <li><a href="https://google+.com"><img src="images/g_plus.png"></a></li>
+        <li><a href="https://twitter.com"><img src="images/twitter.png"></a></li>
+        <li><a href="https://facebook.com"><img src="images/facebook.png"></a></li>
+      </ul>
     </div>
-    <div class="form-group">
-      <input type="email" class="form-control" placeholder="Email Address" name="email">
-    </div>
-    <div class="form-group">
-      <textarea class="form-control" rows="4"></textarea>
-    </div>
-    <button type="submit" class="btn btn-info" id="send">Send</button>
   </div>
-</div>
-
-<div id="foot">
-  <div class="icons">
-    <ul>
-      <li><a href="https://google+.com"><img src="images/g_plus.png"></a></li>
-      <li><a href="https://twitter.com"><img src="images/twitter.png"></a></li>
-      <li><a href="https://facebook.com"><img src="images/facebook.png"></a></li>
-    </ul>
-  </div>
-</div>
   <!--Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
 
 </body>
+
 </html>

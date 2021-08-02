@@ -1,7 +1,3 @@
-// $(document).ready(function(){
-//   $('.header').height($(window).height());
-// })
-
 var del = 400;
 var PizzatotalPrice = [];
 function Order (pizzaSize, crust) {
@@ -34,7 +30,6 @@ Order.prototype.pizzaCost = function () {
  this.pizzaPrice += this.Topping1;
  this.pizzaPrice += this.Topping2;
  this.pizzaPrice *= this.pizzaNumber;
- //this.pizzaPrice *= this.pizzaNumbers;
  return this.pizzaPrice;
 }
 Order.prototype.finalCost = function () {
@@ -44,13 +39,7 @@ Order.prototype.finalCost = function () {
  }
  return TotalPrice;
 }
-// Order.prototype.numberOfPizza = function () {
-//     for(var j = 1; j < pizzaNumbers.length; j++){
-//         var  pizzaNumber = finalCost() * pizzaNumber[j];
-//     }
-//         return pizzaNumber;
-//       }
-//User Interface Logic
+
 $(document).ready(function() { 
   $(".header").height($(window).height());
 
@@ -70,7 +59,6 @@ $(document).ready(function() {
    newPizzaOrder.pizzaCost();
    PizzatotalPrice.push(newPizzaOrder.pizzaPrice);
 
-//$("h4").show(); iipp
 
    $("#pizzaDetails").show();
    $("#totalPizzaCost").text(newPizzaOrder.finalCost());
