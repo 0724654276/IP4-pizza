@@ -57,13 +57,14 @@ body {
   left:20%
 }
 .intro img{
-  width: 300px;
-  height: 300px;
-  border-radius: 50%
+  width: 500px;
+  height: 500px;
+  border-radius: 80%
 }
 .intro h1{
-  color:rgb(44, 168, 44);
-  font-size:50px;
+  color:crimson
+  font: size 200px;
+  
 }
 .intro p {
   color:white;
